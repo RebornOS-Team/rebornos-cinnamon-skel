@@ -1,6 +1,6 @@
 # RebornOS Cinnamon Skeleton
 
-Skeleton for `/home`, used for configuring RebornOS Cinnamon
+Skeleton for `/home`, used for configuring RebornOS Cinnamon.
 
 ## 1. Clone this repository
 
@@ -27,11 +27,11 @@ cd rebornos-cinnamon-skel
 1. On a model target system (like a Cinnamon VM), modify the settings you want to change.
 2. Dump the system settings to a temporary keyfile: `dconf dump / > /tmp/settings.ini`
 3. In the above file, keep only the settings you want the skel config to have, and remove everything else. Save it.
-4. Transfer the contents of the above file to `scripts/keyfiles/settings.ini` in your project directory.
+4. Transfer the contents of the above file to `keyfiles/settings.ini` in your project directory.
 
 ## OR 2. Modify the Keyfile directly
 
-Edit the keyfile `scripts/keyfiles/settings.ini` in your project directory.
+Edit the keyfile `keyfiles/settings.ini` in your project directory.
 
 ## 3. Build the Package
 
