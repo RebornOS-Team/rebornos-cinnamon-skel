@@ -29,11 +29,11 @@ cd rebornos-cinnamon-skel
 3. In the above file, keep only the settings you want the skel config to have, and remove everything else. Save it.
 4. Transfer the contents of the above file to the [keyfile](src/keyfiles/settings.ini) in your project directory.
 
-## AND/OR 2. Modify the Keyfile directly
+## AND/OR 3. Modify the Keyfile directly
 
 Edit the [keyfile](src/keyfiles/settings.ini) in your project directory.
 
-## 3. Packaging
+## 4. Packaging
 
 Change to the project directory (`cd rebornos-cinnamon-skel`) and run any of the below scripts:
 - `sh packaging/setup.sh <MODE>`: Builds and installs a package
