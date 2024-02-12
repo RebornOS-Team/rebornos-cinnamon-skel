@@ -17,7 +17,7 @@ jobs:
         run: sh /usr/bin/init-rebornos-docker.sh
       - name: 🎟 Checkout Git Repository
         id: checkout_repository_step
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🛠 Build Package
         id: build_package_step        
         run: |
@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: 🎟 Checkout Git Repository
         id: checkout_repository_step
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name:  🏷 Determine Tags and Versions
         id: set_versions_step
         run: |
@@ -63,8 +63,7 @@ jobs:
       - name: 🎊 Create Pre-Release
         id: create_release_step
         uses: softprops/action-gh-release@v1
-        with:          
-          draft: false
+        with:
           prerelease: true
           fail_on_unmatched_files: true
           generate_release_notes: true
