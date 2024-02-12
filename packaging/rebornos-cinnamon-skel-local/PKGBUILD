@@ -2,7 +2,7 @@
 # 1. shivanandvp <shivanandvp@rebornos.org, pvshvp.oss@gmail.com>
 
 pkgname=rebornos-cinnamon-skel-local
-pkgver=r10.e5bdb88
+pkgver=1.1.1
 pkgrel=1
 
 arch=(any)

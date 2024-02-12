@@ -6,8 +6,8 @@
 /packaging/**/src
 /packaging/**/*.tar*
 /packaging/**/*.pack
-/packaging/rebornos-mate-skel-git/rebornos-mate-skel/*
-/packaging/rebornos-mate-skel/rebornos-mate-skel/*
+/packaging/rebornos-cinnamon-skel-git/rebornos-cinnamon-skel/*
+/packaging/rebornos-cinnamon-skel/rebornos-cinnamon-skel/*
 
 # VSCode
 /*.code-workspace
