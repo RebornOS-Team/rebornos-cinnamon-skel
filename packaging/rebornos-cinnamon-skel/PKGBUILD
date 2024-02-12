@@ -40,7 +40,7 @@ package() {
     # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))"   
 
     # To bypass makepkg's dependency check during build-time
-    depends+=('mint-themes' 'mint-y-icons')
+    depends+=('mint-themes' 'mint-y-icons' 'inter-font' 'adobe-source-code-pro-fonts')
 
     install -D -m644 "${RESOURCE_DIRECTORY}/etc/skel/.config/dconf/user" "${pkgdir}/etc/skel/.config/dconf/user"
     install -D -m644 "${RESOURCE_DIRECTORY}/usr/share/backgrounds/xfce/pexels-pixabay-258112.jpg" "${pkgdir}/usr/share/backgrounds/xfce/pexels-pixabay-258112.jpg"
