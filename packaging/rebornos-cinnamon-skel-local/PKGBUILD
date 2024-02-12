@@ -1,0 +1,56 @@
+# Maintainers:
+# 1. shivanandvp <shivanandvp@rebornos.org, pvshvp.oss@gmail.com>
+
+pkgname=rebornos-cinnamon-skel-local
+pkgver=r10.e5bdb88
+pkgrel=1
+
+arch=(any)
+pkgdesc='Skeleton for /home, used for configuring RebornOS Cinnamon'
+url='https://github.com/RebornOS-Team/rebornos-cinnamon-skel'
+license=('GPL3')
+depends=()
+optdepends=()
+provides=('skel')
+conflicts=('rebornos-cinnamon-skel' 'rebornos-cinnamon-skel-git')
+makedepends=('dconf') 
+
+source=()
+
+pkgver() {        
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(dirname -- "$(pwd)")")")"     
+
+    ( cd "$PROJECT_DIRECTORY" 
+        set -o pipefail
+        git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    )
+}
+
+build() {     
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(dirname -- "$(pwd)")")")"
+    SCRIPT_DIRECTORY="$PROJECT_DIRECTORY/scripts"
+    SOURCE_DIRECTORY="$PROJECT_DIRECTORY/src"
+    RESOURCE_DIRECTORY="$SOURCE_DIRECTORY/rootfs"
+    # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
+    # NUMBER_OF_PROCESSORS="$(nproc)"
+    # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))" 
+
+    sh "$SCRIPT_DIRECTORY/_update_local_dconf_database_user.sh"
+}
+
+package() {
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(dirname -- "$(pwd)")")")"
+    SCRIPT_DIRECTORY="$PROJECT_DIRECTORY/scripts"
+    SOURCE_DIRECTORY="$PROJECT_DIRECTORY/src"
+    RESOURCE_DIRECTORY="$SOURCE_DIRECTORY/rootfs"
+    # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
+    # NUMBER_OF_PROCESSORS="$(nproc)"
+    # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))"   
+
+    # To bypass makepkg's dependency check during build-time
+    depends+=('mint-themes' 'mint-y-icons')
+
+    install -D -m644 "${RESOURCE_DIRECTORY}/etc/skel/.config/dconf/user" "${pkgdir}/etc/skel/.config/dconf/user"
+    install -D -m644 "${RESOURCE_DIRECTORY}/usr/share/backgrounds/xfce/pexels-pixabay-258112.jpg" "${pkgdir}/usr/share/backgrounds/xfce/pexels-pixabay-258112.jpg"
+}
