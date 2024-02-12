@@ -1,7 +1,7 @@
 # RebornOS Cinnamon Skeleton
 
 [![Discord Server](https://dcbadge.vercel.app/api/server/cU5s6MPpQH?style=flat)](https://discord.gg/cU5s6MPpQH)
-![GitHub License](https://img.shields.io/github/license/rebornos-team/rebornos-cinnamon-skel)
+[![GitHub License](https://img.shields.io/github/license/rebornos-team/rebornos-cinnamon-skel)](LICENSE)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/rebornos-team/rebornos-cinnamon-skel)
 [![Release](https://github.com/RebornOS-Team/rebornos-cinnamon-skel/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Team/rebornos-cinnamon-skel/actions/workflows/release.yml)
 [![Pre-Release (Git)](https://github.com/RebornOS-Team/rebornos-cinnamon-skel/actions/workflows/pre_release.yml/badge.svg)](https://github.com/RebornOS-Team/rebornos-cinnamon-skel/actions/workflows/pre_release.yml)
